@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vegetables</title>
+  <!--
+    Image assets expected next to this file (exported from Figma):
+      images/img_main_pumpkin.png      (node 7:16)
+      images/img_vegetables_corn.png   (node 15:60)
+      images/img_vegetables_carrot.png (node 15:61)
+      images/img_vegetables_pepper.png (node 15:56)
+      images/btn_facebook.png          (node 10:19)
+      images/btn_instagram.png         (node 10:20)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <h1 class="header__title">Vegetables</h1>
+          <div class="header__actions">
+            <a class="header__social header__social--facebook" href="#" aria-label="Facebook">
+              <img src="img/btn_facebook.png" alt="Facebook logo" width="24" height="24">
+            </a>
+            <a class="header__social header__social--instagram" href="#" aria-label="Instagram">
+              <img src="img/btn_instagram.png" alt="Instagram logo" width="24" height="24">
+            </a>
+            <span class="header__divider" aria-hidden="true"></span>
+            <a class="header__btn header__btn--login" href="#">LOGIN</a>
+            <a class="header__btn header__btn--join" href="#">JOIN</a>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+          </button>
+          <ul class="nav__list" id="nav-menu">
+            <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
+            <li class="nav__item"><a class="nav__link" href="#vegetables">Vegetables</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Online</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="hero" aria-label="Featured vegetables">
+          <img class="hero__image" src="img/img_main_pumpkin.png" alt="Pile of bright yellow pumpkins with green stems">
+        </section>
+
+        <div class="info">
+          <section class="vegetables" id="vegetables" aria-labelledby="vegetables-title">
+            <h2 class="box__title vegetables__title" id="vegetables-title">Vegetables</h2>
+            <div class="vegetables__list">
+              <article class="vegetable">
+                <figure class="vegetable__figure">
+                  <img class="vegetable__image" src="img/img_vegetables_corn.png" alt="Golden corn cobs with plump yellow kernels">
+                </figure>
+                <h3 class="vegetable__name">Corn</h3>
+                <p class="vegetable__text">Golden corn cobs with plump, juicy kernels in bright yellow hues.</p>
+              </article>
+              <article class="vegetable">
+                <figure class="vegetable__figure">
+                  <img class="vegetable__image" src="img/img_vegetables_carrot.png" alt="Fresh orange carrots in a basket">
+                </figure>
+                <h3 class="vegetable__name">Carrots</h3>
+                <p class="vegetable__text">Freshly picked, crunchy carrots in rich, deep orange hues.</p>
+              </article>
+              <article class="vegetable">
+                <figure class="vegetable__figure">
+                  <img class="vegetable__image" src="img/img_vegetables_pepper.png" alt="Glossy yellow peppers with green stems">
+                </figure>
+                <h3 class="vegetable__name">Yellow Peppers</h3>
+                <p class="vegetable__text">Fresh, glossy yellow peppers with a sweet, crisp texture and vibrant golden hues.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 class="box__title contact__title" id="contact-title">Contact</h2>
+            <div class="contact__body">
+              <p class="contact__text">For any questions or suggestions about Vegetables, Vegetables Club or your online order you can contact Vegetables Customer Service by phone, email or post and we’ll be happy to help.</p>
+              <hr class="contact__divider">
+              <address class="contact__details">
+                E-mail : Vegetables@aaabbccc.com<br>
+                PHONE : +886-123-456-789
+              </address>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">Copyrights 2017 Vegetables cise / Design by Vegetables</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav__toggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+      });
+    })();
+  </script>
+</body>
+</html>
